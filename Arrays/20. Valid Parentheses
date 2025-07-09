@@ -1,0 +1,55 @@
+/**
+ * @param {string} s
+ * @return {boolean}
+ 
+STACK IS THE BASED ON THE LAST IN FIRST OUT OPERATION 
+PUSH : WHICH IS USED TO PUSH ELEMENTS TO THE STACK
+POP: IS USED TO TO POP THE LAST ELEMENTS.
+PEEK : IS TO CHECK THE CURRENT LAST ELEMENT( OR WE CAN SAY THAT TOP ELEMENT IN THE STACK)
+
+
+
+use cases where we needs can use stack.
+
+1. it is able to do a undo type of functionality. 
+//code
+class Stack{
+stack=[]
+
+push(Item:any): void{
+list.push(item);
+}
+
+pop(item){
+
+}
+
+ */
+var isValid = function(s) {
+
+ 
+ let map= new Map();
+    map.set("{","}")
+    map.set("(",")")
+    map.set("[","]")
+// ===========///==========
+
+    let stack=[];
+
+    for(let i=0;i<s.length;i++){
+
+        if(map.has(s[i])){
+            stack.push(s[i]);
+        }else{
+            if(stack.length>0){
+                let op=stack.pop();
+                if(map.get(op)!==s[i]) return false;
+                
+            }else{
+                 stack.push(s[i])
+            }
+        }
+    }
+return stack.length==0;
+   
+};
