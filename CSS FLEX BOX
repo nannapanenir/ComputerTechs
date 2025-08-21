@@ -1,0 +1,61 @@
+````markdown
+# Flexbox: A Comprehensive Guide
+
+This document summarizes the core concepts and properties of CSS Flexbox, based on the video tutorial "Learn CSS Flexbox in 20 Minutes."
+
+## What is Flexbox?
+
+Flexbox is a one-dimensional layout system that helps you arrange and align items within a single row or column. It's a powerful tool for creating dynamic, responsive designs.
+
+## Fundamental Concepts
+
+### 1. The Main and Cross Axes
+
+Flexbox is based on two axes that determine how items are positioned:
+* **Main Axis:** The primary direction in which flex items are laid out (e.g., left-to-right).
+* **Cross Axis:** The axis perpendicular to the main axis (e.g., top-to-bottom).
+
+### 2. Centering Items
+
+A common use case for Flexbox is centering an element both horizontally and vertically with just a few lines of code.
+
+```css
+.container {
+  display: flex;
+  justify-content: center; /* Aligns along the main axis */
+  align-items: center;     /* Aligns along the cross axis */
+}
+````
+
+-----
+
+## Flexbox Properties
+
+Properties are divided into two categories: those for the parent container and those for the child items.
+
+### Parent Container Properties
+
+These are applied to the element you want to turn into a flex container.
+
+| Property | Description |
+| :--- | :--- |
+| `display: flex;` | Initializes the flex container and enables Flexbox for its direct children. |
+| `flex-direction` | Controls the direction of the main axis (`row`, `column`, `row-reverse`, `column-reverse`). |
+| `justify-content` | Aligns items along the **main axis**. Useful values: `center`, `flex-start`, `space-between`, `space-around`, `space-evenly`. |
+| `align-items` | Aligns items along the **cross axis**. Values: `center`, `flex-start`, `flex-end`, `stretch`. |
+| `flex-wrap` | Specifies whether items should wrap to a new line when they run out of space. Essential for responsive design. |
+| `gap` | Defines the space between flex items, both horizontally and vertically. |
+
+### Child Item Properties
+
+These are applied to the direct children of a flex container.
+
+| Property | Description |
+| :--- | :--- |
+| `flex-grow` | Controls how much an item will grow to fill available space (e.g., `flex-grow: 1`). |
+| `flex-shrink` | Controls how an item will shrink to prevent overflow. |
+| `flex-basis` | Sets the initial size of an item before any growing or shrinking occurs. |
+| `flex` | A shorthand property for `flex-grow`, `flex-shrink`, and `flex-basis`. Example: `flex: 1 1 0%`. |
+
+```
+```
